@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/container_details_xml_constraintlayout_scene2"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_details">
+
+        <TextView
+            android:id="@+id/labelFileNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/file_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/fileNameTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/labelFileNameTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelFileNameTV"
+            app:layout_constraintTop_toTopOf="@+id/labelFileNameTV"
+            tools:text="Glide - Image Loading Library by BumpTech" />
+
+        <ImageView
+            android:id="@+id/download_status_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/download_status_content_description"
+            app:layout_constraintBottom_toBottomOf="@+id/statusTV"
+            app:layout_constraintStart_toStartOf="@+id/labelFileNameTV"
+            app:layout_constraintTop_toTopOf="@+id/statusTV"
+            tools:srcCompat="@drawable/ic_check_circle_outline_24"
+            tools:tint="?attr/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/statusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/download_status"
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            app:layout_constraintStart_toEndOf="@+id/download_status_image"
+            app:layout_constraintTop_toBottomOf="@+id/fileNameTV" />
+
+
+        <TextView
+            android:id="@+id/downloadStatusTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/download_status_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/statusTV"
+            app:layout_constraintTop_toTopOf="@+id/download_status_image"
+            tools:text="Success" />
+
+
+        <Button
+            android:id="@+id/okBtn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/purple_200"
+            android:text="@string/ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>
